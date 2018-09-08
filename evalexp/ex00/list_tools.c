@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   list_tools.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: btion-fr <btion-fr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 18:45:20 by btion-fr          #+#    #+#             */
-/*   Updated: 2018/09/08 23:18:09 by btion-fr         ###   ########.fr       */
+/*   Created: 2018/09/08 23:22:18 by btion-fr          #+#    #+#             */
+/*   Updated: 2018/09/08 23:22:38 by btion-fr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "evalexpr.h"
 
-int		eval_expr(char *str)
+t_list	*ft_create_elem(void *data)
 {
-	t_list	*stack;
-	t_list	*buffer;
+	t_list *element;
 
-	result = 42;
-	return (42);
-}
-
-int		main(int argc, char **argv)
-{
-	if (argc > 1)
-	{
-		ft_putchar('\n');
-	}
-	return (0);
+	if (!(element = malloc(sizeof(t_list))))
+		return (NULL);
+	element->data = data;
+	element->next = NULL;
+	return (element);
 }
